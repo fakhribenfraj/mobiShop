@@ -1,5 +1,6 @@
 # mobiShop
 angular mini projet
 
-
-run npm install
+to excute run
+---------------
+npm install
