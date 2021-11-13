@@ -1,0 +1,22 @@
+<h3 class="title">Cart</h3>
+<div *ngIf="cart.totalPrice">
+  <button (click)="toggleShippingVue()" class="btn">Shipping Prices</button>
+  <app-shipping *ngIf="isShippingView"></app-shipping>
+
+  <div class="cart-item" *ngFor="let item of items">
+    <img [src]="item.product.imgUrl" alt="phone image" class="phoneImg" />
+    <div class="product">
+      <span>{{ item.product.name }}</span>
+      <span>{{ item.product.price | currency }}</span>
+      <span>amount:{{ item.amount }}</span>
+    </div>
+
+    <button (click)="deleteItem(item.product.id)">delete</button>
+  </div>
+  <p>total:${{ cart.totalPrice }}</p>
+  <button (click)="purchase()">purchase</button>
+</div>
+
+<div *ngIf="!cart.totalPrice">
+  <h1>Cart is empty</h1>
+</div>

@@ -1,0 +1,19 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <div class="product">
+    <img [src]="product.imgUrl" alt="phone image" class="phoneImg">
+    <div class="product-detail">
+      <h3>{{ product.name }}</h3>
+      <h4>{{ product.price | currency }}</h4>
+      <h5>{{ product.type }}</h5>
+      <p>{{ product.description }}</p>
+    </div>
+    <p class="amount">{{ amount }}</p>
+    <div class="amount-box">
+      <button (click)="increment()" class="btn">+</button>
+      <button (click)="decrement()" class="btn">-</button>
+    </div>
+  </div>
+  <button (click)="addToCart(product)" class="add">add</button>
+</div>

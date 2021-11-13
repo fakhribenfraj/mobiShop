@@ -1,0 +1,16 @@
+<div class="card">
+  <h1>CONNEXION</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email"> email </label>
+      <input id="email" type="email" formControlName="email" />
+    </div>
+
+    <div>
+      <label for="password"> password </label>
+      <input id="password" type="password" formControlName="password" />
+    </div>
+    <button class="btn" type="submit">Log In</button>
+  </form>
+  <p *ngIf="isNotValidUser" class="invalid">invalid email or password</p>
+</div>

@@ -1,0 +1,27 @@
+.cart{
+    position: relative;
+    margin-right: 1rem;
+}
+.cart__count{
+    background-color: red;
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50rem;
+    text-align: center;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+}
+.cart__count span{
+    width: 100%;
+    color: white;
+    font-size: .8rem;
+
+}
+.nav{
+    display: flex;
+    align-items: center;
+}

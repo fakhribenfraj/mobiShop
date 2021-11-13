@@ -1,0 +1,27 @@
+<a [routerLink]="['/']">
+  <h1>MobiShop</h1>
+</a>
+<div class="nav">
+  <div class="cart">
+    <p class="cart__count" *ngIf="cartAmount>0">
+      <span>{{ cartAmount }}</span>
+    </p>
+    <a routerLink="/cart" class="button fancy-button">
+      <i class="material-icons">shopping_cart</i>Cart
+    </a>
+  </div>
+  <div class="cart" *ngIf="!isLoggedIn">
+    <a routerLink="/login" class="button fancy-button"> Log in </a>
+  </div>
+  <div class="user" *ngIf="isLoggedIn">
+    <a [routerLink]="['/profile', loginId]" class="button fancy-button">
+      {{ user.username }}
+    </a>
+  </div>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

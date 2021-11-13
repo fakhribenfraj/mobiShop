@@ -1,0 +1,29 @@
+<h1>Profile</h1>
+<div class="profile">
+  <div class="card" *ngIf="user.id > 0">
+    <div>
+      <h4>username</h4>
+      <p>{{ user.username }}</p>
+    </div>
+    <div>
+      <h4>email</h4>
+      <p>{{ user.email }}</p>
+    </div>
+    <div>
+      <h4>address</h4>
+      <p>{{ user.address }}</p>
+    </div>
+    <button class="btn" type="button" (click)="logout()">Log Out</button>
+  </div>
+  <div class="carts">
+    <div class="cart-items" *ngFor="let cart of carts">
+      <div class="cart-item" *ngFor="let item of cart.products">
+        <span>{{ item.product.name }}</span>
+        <span>{{ item.product.price | currency }}</span>
+        <span>{{ item.amount }} piece</span>
+      </div>
+      <p>total: ${{ cart.totalPrice }}</p>
+    </div>
+  </div>
+  
+</div>

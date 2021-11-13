@@ -1,0 +1,39 @@
+.product {
+  display: flex;
+  align-items: center;
+}
+.product-detail{
+    margin: 0 2rem;
+}
+.btn {
+  font-size: 1.2rem;
+  padding: 0;
+  margin: .2rem .5rem;
+  width: 1.2rem;
+  height: 1rem;
+  border-radius: .2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9E9E9E;
+  border: 0.1rem solid #9E9E9E;
+  background-color: transparent;
+}
+.btn:hover {
+  color: white;
+  background-color: #FF9800;
+}
+.amount{
+  font-size: 2rem;
+}
+.amount-box{
+  display: flex;
+  flex-direction: column;
+}
+.add{
+  float: right;
+}
+.phoneImg{
+  width: 50%;
+  height: 15rem;
+}

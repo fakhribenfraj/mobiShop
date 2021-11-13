@@ -1,0 +1,18 @@
+.btn {
+  background-color: transparent;
+  color: #ff9800;
+  padding: 1rem 0;
+}
+.title {
+  border-bottom: 0.1rem solid gray;
+}
+.phoneImg {
+  width: 5rem;
+  height: 5rem;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 4rem;
+}

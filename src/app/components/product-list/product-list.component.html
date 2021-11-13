@@ -1,0 +1,17 @@
+<h2>Products</h2>
+<div class="phoneList">
+  <div *ngFor="let product of products" class="card">
+    <a
+      [title]="product.name + ' details'"
+      [routerLink]="['/products', product.id]"
+      ><h3>
+        {{ product.name }}
+      </h3>
+      <img [src]="product.imgUrl" alt="phone image" class="phoneImg">
+    </a>
+    <h5>
+      {{ product.type }}
+    </h5>
+    <p *ngIf="product.description">{{ product.description }}</p>
+  </div>
+</div>
